@@ -1,10 +1,9 @@
 import _ from 'lodash';
 import { startGame } from '../index.js';
 
-// Функция на проверку четности
-
 const rullesGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+// Функция на проверку четности
 const getTrueAnswer = (number) => {
   if (number % 2 === 0) {
     return 'yes';
