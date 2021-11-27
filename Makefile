@@ -18,3 +18,6 @@ brain-calc:
 
 brain-gcd:
 		node bin/brain-gcd.js
+
+prog:
+		node bin/brain-progression.js
