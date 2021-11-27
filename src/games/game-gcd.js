@@ -1,7 +1,9 @@
 import { getRandomNumber, startGame } from '../index.js';
 
+// Rulles game
 const rullesGame = 'Find the greatest common divisor of given numbers.';
 
+// Check question
 const getGreatestCommonDivisior = (firstNumber, secondNumber) => {
   let moreNumber;
   let smallerNumber;
@@ -20,6 +22,7 @@ const getGreatestCommonDivisior = (firstNumber, secondNumber) => {
   return getGreatestCommonDivisior(smallerNumber, (moreNumber % smallerNumber));
 };
 
+// Round's generator
 const generatorQuestion = () => {
   const firstNumber = getRandomNumber();
   const secondNumber = getRandomNumber();
