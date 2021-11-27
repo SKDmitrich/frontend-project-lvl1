@@ -23,4 +23,4 @@ export const startGame = (rullesGame, generatorQuestion) => {
 };
 
 // Number's generator
-export const getRandomNumber = () => _.random(0, 100);
+export const getRandomNumber = () => _.random(1, 100);
