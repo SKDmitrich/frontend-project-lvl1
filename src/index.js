@@ -1,29 +1,26 @@
 import readlineSync from 'readline-sync';
 import _ from 'lodash';
 
-// Запрос имени
-export const getUserName = () => {
+const counterRouds = 3;
+
+// Start game
+export const startGame = (rullesGame, generatorQuestion) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  return userName;
-};
+  console.log(rullesGame);
 
-// Запрос ответа
-export const getAnswer = (question) => {
-  console.log(`Question: ${question}`);
-  return readlineSync.question('Your answer: ');
-};
-
-// Вывод сообщений
-export const checkAnswer = (trueAnswer, userAnswer, userName) => {
-  if (trueAnswer === userAnswer) {
+  for (let i = 1; i <= counterRouds; i += 1) {
+    const [question, trueAnswer] = generatorQuestion();
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (trueAnswer !== userAnswer) {
+      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${trueAnswer}'. \n Let's try again, ${userName}!`);
+    }
     console.log('Correct!');
   }
-  return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${trueAnswer}'. \n Let's try again, ${userName}!`);
+  return console.log(`Congratulations, ${userName}!`);
 };
-
-// Проверка правильности ответов
 
 // Number's generator
 export const getRandomNumber = () => _.random(0, 100);
