@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { startGame } from '../index.js';
 
+// Rulles game
 const rullesGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 // Функция на проверку четности
@@ -11,6 +12,7 @@ const getTrueAnswer = (number) => {
   return 'no';
 };
 
+// Round's generator
 const generatorQuestion = () => {
   const question = _.random(0, 100);
   const trueAnswer = getTrueAnswer(question);
