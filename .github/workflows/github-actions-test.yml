@@ -4,13 +4,19 @@ on:
   push:
 
 jobs:
-   my-job:
+   build:
     runs-on: macos-latest
+    
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     steps:
       - name: npm-install
         run: |
           make install
-
+        env:
+          CI: true  
       - name: run-linter
         run: |
           make lint
