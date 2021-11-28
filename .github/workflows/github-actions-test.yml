@@ -7,5 +7,8 @@ jobs:
    my-job:
     runs-on: ubuntu-latest
     steps:
+      - name: npm-install
+        run: make install
+
       - name: run-linter
-        run: npx eslint .
+        run: make lint
