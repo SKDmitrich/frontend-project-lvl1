@@ -20,7 +20,7 @@ const generateQuestion = () => {
   let nextElement = firstElement;
   let trueAnswer;
 
-  for (let i = 0; i < sizeArithmeticProgression; i += 1) {
+  for (let i = 1; i <= sizeArithmeticProgression; i += 1) {
     if (i === iterHidenElement) {
       arithmeticProgression += hidenSymbol;
       trueAnswer = String(nextElement);
