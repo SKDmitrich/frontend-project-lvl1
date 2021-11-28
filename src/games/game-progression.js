@@ -8,7 +8,7 @@ const rullesGame = 'What number is missing in the progression?';
 const generateQuestion = () => {
   const firstElement = _.random(1, 100);
   const iterHidenElement = _.random(1, 10);
-  const diffArithmeticProgression = _.random(2, 5);
+  const diffArithmeticProgression = _.random(5, 10);
   const hidenSymbol = '.. ';
   const defaultSizeArithmeticProgressio = 10;
 
