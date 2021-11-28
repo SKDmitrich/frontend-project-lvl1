@@ -6,7 +6,7 @@ const rullesGame = 'What number is missing in the progression?';
 
 // Round's generator
 const generateQuestion = () => {
-  const firstElement = _.random(1, 100);
+  const firstElement = _.random(1, 10);
   const SizeArithmeticProgression = _.random(5, 10);
   const iterHidenElement = _.random(1, SizeArithmeticProgression);
   const diffArithmeticProgression = _.random(1, 10);
