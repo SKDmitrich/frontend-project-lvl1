@@ -23,7 +23,7 @@ const getGreatestCommonDivisior = (firstNumber, secondNumber) => {
 };
 
 // Round's generator
-const generatorQuestion = () => {
+const generateQuestion = () => {
   const firstNumber = getRandomNumber();
   const secondNumber = getRandomNumber();
   const question = `${firstNumber}  ${secondNumber}`;
@@ -31,6 +31,6 @@ const generatorQuestion = () => {
   return [question, trueAnswer];
 };
 
-const newGame = () => startGame(rullesGame, generatorQuestion);
+const newGame = () => startGame(rullesGame, generateQuestion);
 
 export default newGame;

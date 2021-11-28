@@ -13,12 +13,12 @@ const getTrueAnswer = (number) => {
 };
 
 // Round's generator
-const generatorQuestion = () => {
+const generateQuestion = () => {
   const question = _.random(0, 100);
   const trueAnswer = getTrueAnswer(question);
   return [question, trueAnswer];
 };
 
-const newGame = () => startGame(rullesGame, generatorQuestion);
+const newGame = () => startGame(rullesGame, generateQuestion);
 
 export default newGame;

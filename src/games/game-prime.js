@@ -15,12 +15,12 @@ const getTrueAnswer = (question) => {
 };
 
 // Generator question
-const generatorQuestion = () => {
+const generateQuestion = () => {
   const question = _.random(2, 1000);
   const trueAnswer = getTrueAnswer(question);
   return [question, trueAnswer];
 };
 
-const newGame = () => startGame(rullesGame, generatorQuestion);
+const newGame = () => startGame(rullesGame, generateQuestion);
 
 export default newGame;

@@ -5,7 +5,7 @@ import { getRandomNumber, startGame } from '../index.js';
 const rullesGame = 'What is the result of the expression?';
 
 // Round's generator
-const generatorQuestion = () => {
+const generateQuestion = () => {
   const operators = ['+', '-', '*'];
   const operator = _.sample(operators);
   const firstOperand = getRandomNumber();
@@ -16,6 +16,6 @@ const generatorQuestion = () => {
   return [question, trueAnswer];
 };
 
-const newGame = () => startGame(rullesGame, generatorQuestion);
+const newGame = () => startGame(rullesGame, generateQuestion);
 
 export default newGame;
