@@ -16,7 +16,7 @@ const generateQuestion = () => {
   const diffArithmeticProgression = _.random(minCount, maxCount);
   const hidenSymbol = '.. ';
 
-  let arithmeticProgression = ' ';
+  let arithmeticProgression = '';
   let nextElement = firstElement;
   let trueAnswer;
 
