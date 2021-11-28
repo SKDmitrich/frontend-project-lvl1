@@ -2,8 +2,6 @@ name: github-actions-test
 
 on:
   push:
-    - push
-    - pull_request
 
 jobs:
    build:
