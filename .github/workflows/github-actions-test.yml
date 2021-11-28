@@ -2,15 +2,10 @@ name: github-actions-test
 
 on:
   push:
-    branches: [ master ]
 
 jobs:
-  build:
-
-    runs-on: macos-latest
-
+   my-job:
+    runs-on: ubuntu-latest
     steps:
-      
-      - name: Run Linter
-        run: |
-          make lint
+      - name: run-linter
+        run: npx eslint .
