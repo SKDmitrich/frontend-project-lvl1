@@ -4,14 +4,14 @@ import _ from 'lodash';
 const counterRouds = 3;
 
 // Start game
-export const startGame = (rullesGame, generatorQuestion) => {
+export const startGame = (rullesGame, generateQuestion) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(rullesGame);
 
   for (let i = 1; i <= counterRouds; i += 1) {
-    const [question, trueAnswer] = generatorQuestion();
+    const [question, trueAnswer] = generateQuestion();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (trueAnswer !== userAnswer) {

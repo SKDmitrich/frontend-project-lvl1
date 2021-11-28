@@ -16,6 +16,6 @@ const generateQuestion = () => {
   return [question, trueAnswer];
 };
 
-const newGame = () => startGame(rullesGame, generateQuestion);
+const showGame = () => startGame(rullesGame, generateQuestion);
 
-export default newGame;
+export default showGame;
