@@ -26,11 +26,11 @@ const getGreatestCommonDivisior = (firstNumber, secondNumber) => {
 const generateQuestion = () => {
   const firstNumber = getRandomNumber();
   const secondNumber = getRandomNumber();
-  const question = `${firstNumber}  ${secondNumber}`;
+  const question = `${firstNumber} ${secondNumber}`;
   const trueAnswer = String(getGreatestCommonDivisior(firstNumber, secondNumber));
   return [question, trueAnswer];
 };
 
-const newGame = () => startGame(rullesGame, generateQuestion);
+const showGame = () => startGame(rullesGame, generateQuestion);
 
-export default newGame;
+export default showGame;
